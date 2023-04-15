@@ -20,6 +20,7 @@ form {
 
 .loginContainer > h1 {
   color: rgba(0, 59, 229, 1);
+  font-size: 3.5rem;
   /* margin: 4rem; */
 }
 
@@ -33,6 +34,7 @@ form {
   border-radius: 100px;
   text-align: center;
   color: #003BE5;
+  font-size: 1.3rem;
 }
 
 .loginContainer > form > input::placeholder {
@@ -47,6 +49,7 @@ form {
   background-color: #003BE5;
   border-radius: 100px;
   color: white;
+  font-size: 1.3rem;
 }
 
 .loginContainer > form > button:disabled {

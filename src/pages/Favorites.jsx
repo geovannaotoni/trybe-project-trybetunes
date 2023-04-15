@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Loading from './Loading';
 import MusicCard from '../components/MusicCard';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
+import '../styles/Favorites.css';
 
 class Favorites extends Component {
   state = {
@@ -35,13 +36,15 @@ class Favorites extends Component {
   render() {
     const { loading, favorites } = this.state;
     return (
-      <div data-testid="page-favorites">
+      <div data-testid="page-favorites" className="favoritesContainer">
         <Header />
         {
           loading
-            ? <Loading />
-            : (
-              <section>
+          ? <Loading />
+          : (
+            <div>    
+            <h3>Músicas Favoritas</h3>
+            <section>
                 {favorites.map((music) => (
                   <article key={ music.trackId }>
                     <MusicCard
@@ -52,6 +55,7 @@ class Favorites extends Component {
                   </article>
                 ))}
               </section>
+              </div>
             )
         }
       </div>

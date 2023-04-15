@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Header from '../components/Header';
 import Loading from './Loading';
 import { getUser, updateUser } from '../services/userAPI';
+import '../styles/Profile.css'
 
 class ProfileEdit extends Component {
   state = {

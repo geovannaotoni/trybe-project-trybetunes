@@ -1,0 +1,67 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3rem;
+  height: 100vh;
+  background-color: white;
+  width: 20vw;
+}
+
+nav > ul > li {
+  list-style-type: none;
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+nav > ul > li:hover {
+  background-color: rgba(0, 215, 226, 0.6);
+  color: white;
+  width: 100%;
+  font-weight: 700;
+}
+
+nav {
+  width: 100%;
+  text-align: center;
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  cursor: pointer;
+  /* color: #444955; */
+  color: black;
+} 
+
+h1 {
+  color: rgba(0, 59, 229, 1);
+  display: flex;
+  flex-direction: column;
+  font-size: 2.5rem;
+}
+
+h1 > strong {
+  color: rgba(0, 213, 226, 1);
+}
+
+header p {
+  font-family: 'Epilogue';
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #444955;
+  font-size: 1.2rem;
+  color: rgba(0, 59, 229, 1);
+}

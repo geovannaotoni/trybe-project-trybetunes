@@ -5,6 +5,7 @@ import getMusics from '../services/musicsAPI';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import MusicCard from '../components/MusicCard';
 import Loading from './Loading';
+import '../styles/Album.css';
 
 class Album extends Component {
   state = {
@@ -46,16 +47,25 @@ class Album extends Component {
   render() {
     const { album, musics, loading, favorites } = this.state;
     return (
-      <div data-testid="page-album">
+      <div data-testid="page-album" className="albumContainer">
         <Header />
-        <img src={ album.artworkUrl100 } alt={ album.collectionName } />
-        <h3 data-testid="artist-name">{album.artistName}</h3>
-        <h4 data-testid="album-name">{album.collectionName}</h4>
+        <div>
+        <section>
+          <img src={ album.artworkUrl100 } alt={ album.collectionName } />
+          <h3 data-testid="artist-name">{album.artistName}</h3>
+          <h4 data-testid="album-name">{album.collectionName}</h4>
+          {/* <button
+            onClick={() => this.props.history.goBack()}
+          >
+          Voltar
+        </button> */}
+        </section>
         {
           loading
             ? <Loading />
             : (
               <section>
+                <p>Lista de Músicas deste Álbum</p>
                 {musics.map((music) => (
                   <article key={ music.trackId }>
                     <MusicCard
@@ -68,6 +78,7 @@ class Album extends Component {
               </section>
             )
         }
+        </div>
       </div>
     );
   }

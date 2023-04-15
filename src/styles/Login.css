@@ -1,0 +1,63 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 50%;
+}
+
+.loginContainer {
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 26px rgba(68, 73, 85, 0.2);
+  border-radius: 20px;
+  /* background-color: #184E77; */
+}
+
+.loginContainer > h1 {
+  color: rgba(0, 59, 229, 1);
+  /* margin: 4rem; */
+}
+
+.loginContainer > h1 > strong {
+  color: rgba(0, 213, 226, 1);
+}
+
+.loginContainer > form > input {
+  padding: 1rem;
+  border: 1px solid #003BE5;
+  border-radius: 100px;
+  text-align: center;
+  color: #003BE5;
+}
+
+.loginContainer > form > input::placeholder {
+  color: #003BE5;
+}
+
+.loginContainer > form > button {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #003BE5;
+  border-radius: 100px;
+  color: white;
+}
+
+.loginContainer > form > button:disabled {
+  background-color: rgba(0, 215, 226, 0.652);
+}
+
+/* .loginContainer > form > button {
+  background-color: #99D98C;
+} */
+
+.loginContainer > form > button:hover:enabled {
+  background-color: rgba(0, 57, 229, 0.801);
+  cursor: pointer;
+}

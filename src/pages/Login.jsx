@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { createUser } from '../services/userAPI';
 import Loading from './Loading';
+import '../styles/Login.css';
 
 class Login extends Component {
   state = {
@@ -33,7 +34,8 @@ class Login extends Component {
   render() {
     const { inputName, buttonDisabled, isLogged } = this.state;
     return (
-      <div data-testid="page-login">
+      <div data-testid="page-login" className="loginContainer">
+        <h1><strong>&#9835; Trybe</strong>Tunes &#9835;</h1>
         {
           isLogged
             ? <Loading />

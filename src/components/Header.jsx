@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { getUser } from '../services/userAPI';
 import Loading from '../pages/Loading';
+import '../styles/Header.css';
 
 class Header extends Component {
   state = {
@@ -30,7 +31,20 @@ class Header extends Component {
     const { userName, loading } = this.state;
     return (
       <header data-testid="header-component">
-        <p>TrybeTunes</p>
+        <h1><strong>&#9835; Trybe</strong>Tunes &#9835;</h1>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/search" data-testid="link-to-search">&#128270; Pesquisa</Link>
+            </li>
+            <li>
+              <Link to="/favorites" data-testid="link-to-favorites">&#10084; Favoritos</Link>
+            </li>
+            <li>
+              <Link to="/profile" data-testid="link-to-profile">&#128100; Perfil</Link>
+            </li>
+          </ul>
+        </nav>
         {
           loading
             ? <Loading />
@@ -38,19 +52,6 @@ class Header extends Component {
               <p data-testid="header-user-name">{ userName }</p>
             )
         }
-        <nav>
-          <ul>
-            <li>
-              <Link to="/search" data-testid="link-to-search">Pesquisa</Link>
-            </li>
-            <li>
-              <Link to="/favorites" data-testid="link-to-favorites">Favoritos</Link>
-            </li>
-            <li>
-              <Link to="/profile" data-testid="link-to-profile">Perfil</Link>
-            </li>
-          </ul>
-        </nav>
       </header>
     );
   }

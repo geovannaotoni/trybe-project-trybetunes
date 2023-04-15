@@ -1,0 +1,90 @@
+.albumContainer {
+  display: flex;
+}
+
+.albumContainer > div {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.albumContainer > div > section > img {
+  width: 9rem;
+}
+
+.albumContainer > div > section:first-of-type {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  height: 40vh;
+  padding: 1rem;
+  color: white;
+}
+
+.albumContainer > div > section:nth-of-type(1) > h4 {
+  font-weight: 300;
+}
+
+.albumContainer > div > section:nth-of-type(1) > img {
+  border: 1px solid white;
+}
+
+/* .albumContainer > div > section:first-of-type > button {
+  cursor: pointer;
+  background-color: rgb(0, 213, 226);
+  border-radius: 23px;
+  padding: 0.7em 1.5rem;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.albumContainer > div > section:first-of-type > button:hover {
+  background-color: rgba(0, 215, 226, 0.7);
+} */
+
+.albumContainer > div > section:nth-of-type(2) {
+  background-color: #E6E8EA;
+  overflow-y: scroll;
+  height: 60vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.albumContainer > div > section:nth-of-type(2) > article {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* .albumContainer > div > section:nth-of-type(2) > article > p {
+  flex: 1 0 100%;
+} */
+
+.albumContainer > div > section:nth-of-type(2) > article > p {
+  width: 20%;
+  text-align: center;
+  font-weight: 700;
+}
+
+.albumContainer > div > section:nth-of-type(2) > article > audio {
+  width: 40%;
+}
+
+.albumContainer > div > section:nth-of-type(2) > p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(0, 59, 229, 1);
+    margin: 1rem 0;
+  }

@@ -14,13 +14,14 @@ class MusicCard extends Component {
     this.verifyFavorites(); // chama a função no momento que o componente é montado
   }
 
-  componentDidUpdate() {
-    this.getUpdateFavorites(); // chama a função toda vez que o componente é atualizado, ou seja, toda vez que se clica no checkbox
-  }
+  // componentDidUpdate() {
+  //   this.getUpdateFavorites(); // chama a função toda vez que o componente é atualizado, ou seja, toda vez que se clica no checkbox
+  // }
 
   // Função para verificar se a música é favorita, atualizando o state dela como checked, se sim
-  verifyFavorites = () => {
-    const { favorites, trackId } = this.props;
+  verifyFavorites = async () => {
+    const { trackId } = this.props;
+    const favorites = await getFavoriteSongs();
     this.setState({
       checked: favorites.some((favorite) => favorite.trackId === trackId), // verifica se o trackId do componente é igual a algum trackId dos elementos contidos na lista de musicas favoritadas
     });
@@ -36,19 +37,23 @@ class MusicCard extends Component {
       await addSong(this.props); // recebe como parâmetro o objeto recebido da API getMusics, ou seja, o props do componente, para salvar no localStorage
     } else {
       await removeSong(this.props);
-      this.getUpdateFavorites();
+      // this.getUpdateFavorites();
     }
-    this.setState((prevState) => ({
+    // this.setState((prevState) => ({
+    //   loading: false,
+    //   checked: !prevState.checked,
+    // }));
+    await this.verifyFavorites();
+    this.setState({
       loading: false,
-      checked: !prevState.checked,
-    }));
+    });
   };
 
-  getUpdateFavorites = async () => {
-    const { updateFavorites } = this.props; // função recebida no comp pai Favorites e Album
-    const newFavorites = await getFavoriteSongs(); // obtém a lista das músicas favoritas salvas no localStorage após a remoção de uma música
-    updateFavorites(newFavorites); // atualiza no componente pai Favorites a lista atualizada de músicas favoritas no state dele, forçando a renderização novamente do componente Pai ao remover uma música dos favoritos
-  };
+  // getUpdateFavorites = async () => {
+  //   const { updateFavorites } = this.props; // função recebida no comp pai Favorites e Album
+  //   const newFavorites = await getFavoriteSongs(); // obtém a lista das músicas favoritas salvas no localStorage após a remoção de uma música
+  //   updateFavorites(newFavorites); // atualiza no componente pai Favorites a lista atualizada de músicas favoritas no state dele, forçando a renderização novamente do componente Pai ao remover uma música dos favoritos
+  // };
 
   render() {
     const { trackName, previewUrl, trackId } = this.props;

@@ -89,6 +89,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+  font-family: 'Lato', sans-serif;
 }
 
 .searchContainer > div > section > article > img {
@@ -98,6 +99,10 @@
 .searchContainer > div > section > article > p:first-of-type {
   font-weight: 700;
 }
+
+/* .searchContainer > div > section > article > p:nth-of-type(2) {
+  font-family: 'Lato', sans-serif;
+} */
 
 .searchContainer > div > section > article > a {
   color: rgba(0, 59, 229, 1);

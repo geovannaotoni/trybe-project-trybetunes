@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import Header from '../components/Header';
 import Loading from './Loading';
 import { getUser, updateUser } from '../services/userAPI';
-import '../styles/Profile.css'
+import '../styles/ProfileEdit.css'
+
 
 class ProfileEdit extends Component {
   state = {
@@ -67,14 +68,17 @@ class ProfileEdit extends Component {
   render() {
     const { name, email, image, description, loading, buttonDisabled } = this.state;
     return (
-      <div data-testid="page-profile-edit">
+      <div data-testid="page-profile-edit" className='profileEditContainer'>
         <Header />
         {
           loading
             ? <Loading />
             : (
+              <section>
+              <h3>Edite seu perfil aqui</h3>
               <form>
                 <label htmlFor="image">
+                  Caminho da imagem de perfil:
                   <input
                     type="text"
                     name="image"
@@ -85,7 +89,7 @@ class ProfileEdit extends Component {
                   />
                 </label>
                 <label htmlFor="name">
-                  Fique à vontade para usar seu nome social
+                  Como você gostaria de ser chamado(a)?
                   <input
                     type="text"
                     data-testid="edit-input-name"
@@ -96,7 +100,7 @@ class ProfileEdit extends Component {
                   />
                 </label>
                 <label htmlFor="email">
-                  Escolha um e-mail que consulte frequentemente
+                  Escolha um e-mail que consulte frequentemente:
                   <input
                     type="email"
                     data-testid="edit-input-email"
@@ -127,6 +131,7 @@ class ProfileEdit extends Component {
                   Editar perfil
                 </button>
               </form>
+              </section>
             )
         }
       </div>

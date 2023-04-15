@@ -50,7 +50,8 @@ h1 {
   color: rgba(0, 59, 229, 1);
   display: flex;
   flex-direction: column;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 h1 > strong {
@@ -64,4 +65,8 @@ header p {
   color: #444955;
   font-size: 1.2rem;
   color: rgba(0, 59, 229, 1);
+}
+
+i {
+  margin-right: 0.5rem;
 }

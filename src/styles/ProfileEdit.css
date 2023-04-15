@@ -1,0 +1,73 @@
+.profileEditContainer {
+  display: flex;
+}
+
+.profileEditContainer > section > form {
+  width: 80vw;
+  height: 80vh;
+  background-color: #E6E8EA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+
+.profileEditContainer > section > h3 {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.profileEditContainer > section > form > label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  width: 100%;
+  font-family: 'Epilogue', sans-serif;
+}
+
+.profileEditContainer > section > form > label > input {
+  width: 50%;
+  padding: 1rem;
+  border: 1px solid #003BE5;
+  text-align: center;
+  color: #003BE5;
+  font-size: 1.2rem;
+}
+
+.profileEditContainer > section > form > label > textarea {
+  width: 50%;
+  padding: 1rem;
+  border: 1px solid #003BE5;
+  text-align: center;
+  color: #003BE5;
+}
+
+.profileEditContainer > section > form > button {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #003BE5;
+  border-radius: 100px;
+  color: white;
+  text-decoration: none;
+}
+
+.profileEditContainer > section > form > button:hover:enabled {
+  background-color: rgba(0, 57, 229, 0.801);
+  cursor: pointer;
+}
+
+.profileEditContainer > section > form > button:disabled {
+  background-color: rgba(0, 215, 226, 0.652);
+}

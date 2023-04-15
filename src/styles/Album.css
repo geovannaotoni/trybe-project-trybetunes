@@ -24,6 +24,7 @@
   height: 40vh;
   padding: 1rem;
   color: white;
+  font-family: 'Lato', sans-serif;
 }
 
 .albumContainer > div > section:nth-of-type(1) > h4 {
@@ -74,6 +75,7 @@
   width: 20%;
   text-align: center;
   font-weight: 700;
+  font-family: 'Epilogue';
 }
 
 .albumContainer > div > section:nth-of-type(2) > article > audio {

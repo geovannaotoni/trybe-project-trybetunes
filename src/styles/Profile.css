@@ -1,0 +1,46 @@
+.profileContainer {
+  display: flex;
+}
+
+.profileContainer > section {
+  width: 80vw;
+}
+
+.profileContainer > section > h3 {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.profileContainer > section > article {
+  width: 80vw;
+  height: 80vh;
+  background-color: #E6E8EA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  overflow-y: scroll;
+  font-family: 'Epilogue', sans-serif;
+}
+
+.profileContainer > section > article > a {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #003BE5;
+  border-radius: 100px;
+  color: white;
+  text-decoration: none;
+}
+
+.profileContainer > section > article > a:hover {
+  background-color: rgba(0, 57, 229, 0.801);
+  cursor: pointer;
+}

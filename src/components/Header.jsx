@@ -35,13 +35,13 @@ class Header extends Component {
         <nav>
           <ul>
             <li>
-              <Link to="/search" data-testid="link-to-search">&#128270; Pesquisa</Link>
+              <Link to="/search" data-testid="link-to-search"><i className="fa fa-search" /> Pesquisa</Link>
             </li>
             <li>
-              <Link to="/favorites" data-testid="link-to-favorites">&#10084; Favoritos</Link>
+              <Link to="/favorites" data-testid="link-to-favorites"><i className="fa fa-heart"></i> Favoritos</Link>
             </li>
             <li>
-              <Link to="/profile" data-testid="link-to-profile">&#128100; Perfil</Link>
+              <Link to="/profile" data-testid="link-to-profile"><i className="fa fa-user" /> Perfil</Link>
             </li>
           </ul>
         </nav>

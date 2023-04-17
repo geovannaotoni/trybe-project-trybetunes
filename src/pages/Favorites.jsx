@@ -15,6 +15,13 @@ class Favorites extends Component {
     this.recoverFavoriteMusics();
   }
 
+  async componentDidUpdate() {
+    const favoritesMusics = await getFavoriteSongs(); // recuperar as músicas salvas como favoritas do localStorage
+    this.setState({
+      favorites: favoritesMusics,
+    });
+  }
+
   recoverFavoriteMusics = async () => {
     this.setState({
       loading: true,
@@ -27,11 +34,11 @@ class Favorites extends Component {
   };
 
   // Função que recebe a lista de músicas favoritas do componente filho e atualiza no state a lista mais atualizada caso alguma musica seja excluida. Como ele altera o state, ele força a renderização dos MusicCards novamente, sem renderizar aqueles que não são favoritos mais
-  updateFavorites = (newFavorites) => {
-    this.setState({
-      favorites: newFavorites,
-    });
-  };
+  // updateFavorites = (newFavorites) => {
+  //   this.setState({
+  //     favorites: newFavorites,
+  //   });
+  // };
 
   render() {
     const { loading, favorites } = this.state;
@@ -50,7 +57,7 @@ class Favorites extends Component {
                     <MusicCard
                       { ...music }
                       favorites={ favorites }
-                      updateFavorites={ this.updateFavorites }
+                      // updateFavorites={ this.updateFavorites }
                     />
                   </article>
                 ))}

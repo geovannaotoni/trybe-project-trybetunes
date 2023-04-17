@@ -28,11 +28,11 @@ class Album extends Component {
   };
 
   // Função que recebe a lista de músicas favoritas do componente filho e atualiza no state a lista mais atualizada caso alguma musica seja adicionada/excluida
-  updateFavorites = (newFavorites) => {
-    this.setState({
-      favorites: newFavorites,
-    });
-  };
+  // updateFavorites = (newFavorites) => {
+  //   this.setState({
+  //     favorites: newFavorites,
+  //   });
+  // };
 
   getMusicsFromAPI = async () => {
     const { match: { params: { id } } } = this.props;
@@ -71,7 +71,7 @@ class Album extends Component {
                     <MusicCard
                       { ...music }
                       favorites={ favorites }
-                      updateFavorites={ this.updateFavorites }
+                      // updateFavorites={ this.updateFavorites }
                     />
                   </article>
                 ))}
